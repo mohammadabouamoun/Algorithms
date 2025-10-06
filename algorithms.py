@@ -49,3 +49,15 @@ def fibonacci(n):
 # print(fibonacci(5 ))
 
 
+
+def rec_fibonacci(n, a =0,b=1 ):
+ 
+   if n ==0 : 
+    return a
+   if n ==1 :
+    return b
+   if n > 0 :   
+      inc = a+b 
+   return rec_fibonacci(n-1, a = b , b = inc )
+ 
+# print(rec_fibonacci(6))   
