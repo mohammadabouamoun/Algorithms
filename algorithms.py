@@ -14,16 +14,21 @@ def factorial(n):
 
 
 def find_max(numbers):
-   max_num = numbers[0]
-   for i in  numbers :
+    max_num = numbers[0]
+    for i in  numbers :
 
-     if max_num < i :
-       max_num = i 
+      if max_num < i :
+        max_num = i 
 
-   return max_num
+    return max_num
 
 # maximum = find_max([2,4,34,54,65,743,4,1,2])
 # print(maximum)
  
-
-    
+def linear_search(numbers, x):
+   for i in numbers:
+      if i == x :
+         return True
+   return False
+# print(linear_search([2,23,43,5,23,1,24,3],6))      
+# print(linear_search([2,23,43,5,23,1,24,3],5))     
