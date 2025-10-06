@@ -32,3 +32,20 @@ def linear_search(numbers, x):
    return False
 # print(linear_search([2,23,43,5,23,1,24,3],6))      
 # print(linear_search([2,23,43,5,23,1,24,3],5))     
+
+
+def fibonacci(n):
+  a = 1
+  b = 0
+  for i in range(n):
+     add = a + b 
+     b = a 
+     a = add 
+  return b
+# print(fibonacci(0))
+# print(fibonacci(1))
+# print(fibonacci(2))
+# print(fibonacci(3))
+# print(fibonacci(5 ))
+
+
