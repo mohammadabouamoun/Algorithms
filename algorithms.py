@@ -61,3 +61,15 @@ def rec_fibonacci(n, a =0,b=1 ):
    return rec_fibonacci(n-1, a = b , b = inc )
  
 # print(rec_fibonacci(6))   
+
+def login() :
+   username = input(" please enter username")
+   password = input("please enter the password")
+   if username == "admin123" and password == "123456789" :
+      print("you have succesfully logged in ")
+      return True
+   else:
+        print("Invalid username or password.")
+        return False
+
+
