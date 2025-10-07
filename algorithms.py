@@ -63,8 +63,8 @@ def rec_fibonacci(n, a =0,b=1 ):
 # print(rec_fibonacci(6))   
 
 def login() :
-   username = input(" please enter username")
-   password = input("please enter the password")
+   username = input(" please enter username ")
+   password = input("please enter the password ")
    if username == "admin123" and password == "123456789" :
       print("you have succesfully logged in ")
       return True
@@ -73,3 +73,70 @@ def login() :
         return False
 
 
+loggedin = False
+while True :
+
+
+ print('''     
+    Choose an option:
+  1. Factorial
+  2. Find Max
+  3. Linear Search
+  4. Fibonacci
+  5. Login
+  6. Exit
+  ''')
+ user_input= input("please choose an option  (remember to  login  first)")
+
+ if user_input == "1" :
+   if  loggedin == False :
+      print("you should login first")
+   else :
+    ask = input("please give a number ")
+    print("the factorial number of",ask,"is", factorial(int(ask))) 
+
+
+ if user_input == "2" :
+   if  loggedin == False :
+      print("you should login first")
+   else:   
+    Numbers = []
+    while True :
+      ask1 = input("enter the numbers of the list one by one.(write done when you finish the numbers)").strip()
+      if ask1 == "done":
+        break 
+      else : 
+         Numbers.append(int(ask1))
+    find_max(Numbers)    
+    print("the maximum number in the list is ",find_max(Numbers) )  
+  
+  
+   
+
+ if user_input == "3" :
+   if  loggedin == False :
+      print("you should login first")
+
+   else:   
+     Number = [2,4,5,6,67,7,3,4,5,64,61]
+     
+     target = int(input("please give the number you are searching for inside the list"))
+     print(linear_search(Number,target))
+
+
+ if user_input == "4" :
+   if  loggedin == False :
+      print("you should login first")
+   else:
+    ask = input( "please give a number ")   
+    print(fibonacci(int(ask)))
+
+
+ if user_input == "5":
+   if not loggedin :
+           loggedin =  login() 
+   else:
+      print("you are already logeedin")        
+   
+ if user_input == "6" :
+   break
