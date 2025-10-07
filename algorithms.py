@@ -1,9 +1,9 @@
-def factorial(n):
+def factorial(n):# time complexity : O(n)
 
   result = 1
   if n < 0 :
      return "Factorial is not used for negative numbers."
-  while n > 0 :
+  while n > 0 :#  while loop O(n) 
      result *= n 
      n = n-1 
   return result 
@@ -11,12 +11,12 @@ def factorial(n):
 #  print(factorial(5))
 #  print(factorial(-4))
 
-
-
+# ////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////
+# time complexity : O(n)
 def find_max(numbers):
     max_num = numbers[0]
     for i in  numbers :
-
       if max_num < i :
         max_num = i 
 
@@ -24,20 +24,29 @@ def find_max(numbers):
 
 # maximum = find_max([2,4,34,54,65,743,4,1,2])
 # print(maximum)
- 
+
+# ////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////
+
+# time complexity : O(n)
+
 def linear_search(numbers, x):
-   for i in numbers:
-      if i == x :
-         return True
+   for i in numbers: #  for loop O(n) 
+         if i == x :  # if statement O(1)
+          return True
    return False
 # print(linear_search([2,23,43,5,23,1,24,3],6))      
 # print(linear_search([2,23,43,5,23,1,24,3],5))     
 
+# ////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////
 
+
+# time complexity : O(n)
 def fibonacci(n):
   a = 1
   b = 0
-  for i in range(n):
+  for i in range(n):#  for loop O(n)
      add = a + b 
      b = a 
      a = add 
@@ -48,20 +57,27 @@ def fibonacci(n):
 # print(fibonacci(3))
 # print(fibonacci(5 ))
 
+# ////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////
 
 
+# time complexity : O(n)
 def rec_fibonacci(n, a =0,b=1 ):
- 
-   if n ==0 : 
+   if n ==0 : # if statement O(1)
     return a
-   if n ==1 :
+   if n ==1 :# if statement O(1)
     return b
-   if n > 0 :   
+   if n > 0 :   # if statement O(1)
       inc = a+b 
-   return rec_fibonacci(n-1, a = b , b = inc )
+   return rec_fibonacci(n-1, a = b , b = inc )# calling the function O(n)
  
 # print(rec_fibonacci(6))   
 
+# ////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////
+
+
+# time complexity : O(1)
 def login() :
    username = input(" please enter username ")
    password = input("please enter the password ")
@@ -72,6 +88,8 @@ def login() :
         print("Invalid username or password.")
         return False
 
+# ////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////
 
 loggedin = False
 while True :
